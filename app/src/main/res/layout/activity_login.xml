@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="339dp"
-        app:srcCompat="@drawable/avatar_default"
+        app:srcCompat="@drawable/logo2"
         android:id="@+id/imageView" />
 
     <ProgressBar
