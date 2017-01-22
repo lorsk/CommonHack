@@ -5,22 +5,19 @@ package com.lorsku.pennapps2017hack;
  */
 public class Hackathon {
 
-    private int id;
-    private int id_solicitante;
-    private int id_solicitado;
+
     private int status;
     private int type;
-    private int atualizado_em;
-    private int criado_em;
+
 
     private String HackathonName;
     private String location;
     private String date;
     private String photo;
-    private int id_usuario;
-    private int nascimento;
-    private String nome_cidade;
-    private String nome_estado;
+
+    private String websiteLink;
+
+
 
     public String getHackathonName() {
         return HackathonName;
@@ -56,9 +53,7 @@ public class Hackathon {
 
 
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
     /*
     public int getId_solicitante() {
         return id_solicitante;
@@ -92,6 +87,14 @@ public class Hackathon {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getWebsiteLink() {
+        return websiteLink;
+    }
+
+    public void setWebsiteLink(String websiteLink) {
+        this.websiteLink = websiteLink;
     }
     /*
 

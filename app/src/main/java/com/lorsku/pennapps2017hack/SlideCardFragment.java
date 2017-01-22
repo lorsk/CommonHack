@@ -53,6 +53,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon1.setHackathonName("Fashion Hacks");
         hackathon1.setLocation("Ken State University");
         hackathon1.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon1.setWebsiteLink("http://www.fashiontechhackathon.com/");
         recordSet.add(hackathon1);
 
         Hackathon hackathon2 =  new Hackathon();
@@ -60,6 +61,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon2.setHackathonName("HackEd");
         hackathon2.setLocation("Startup Edmonton");
         hackathon2.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon2.setWebsiteLink("http://hacked.compeclub.com/");
         recordSet.add(hackathon2);
 
         Hackathon hackathon3 =  new Hackathon();
@@ -67,6 +69,8 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon3.setHackathonName("Hackpoly");
         hackathon3.setLocation("California State Polytechnic University, Pomona Campus");
         hackathon3.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon3.setWebsiteLink("http://www.hackpoly.com");
+
         recordSet.add(hackathon3);
 
         Hackathon hackathon4 =  new Hackathon();
@@ -74,6 +78,8 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon4.setHackathonName("Pearl Hacks");
         hackathon4.setLocation("University of North Carolina, Chapel Hill Campus");
         hackathon4.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon4.setWebsiteLink("http://pearlhacks.com/");
+
         recordSet.add(hackathon4);
 
         Hackathon hackathon5 =  new Hackathon();
@@ -81,6 +87,8 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon5.setHackathonName("HackYSU");
         hackathon5.setLocation("Youngstown State University");
         hackathon5.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon5.setWebsiteLink("http://hackysu.com/");
+
         recordSet.add(hackathon5);
 
         Hackathon hackathon6 =  new Hackathon();
@@ -88,6 +96,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon6.setHackathonName("HackCentral");
         hackathon6.setLocation("University of Manitoba");
         hackathon6.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon6.setWebsiteLink("http://hackcentral.ca/");
         recordSet.add(hackathon6);
 
         Hackathon hackathon7 =  new Hackathon();
@@ -95,6 +104,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon7.setHackathonName("HackHERS");
         hackathon7.setLocation("Rutgers University");
         hackathon7.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon7.setWebsiteLink("http://hackhers.us/");
         recordSet.add(hackathon7);
     }
 
@@ -187,6 +197,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         public TextView estado;
         public TextView cidade;
         public TextView titulo;
+        public Button btnWebSite;
         //public CircularImageView friendPhoto;
         public int tipo;
         public Button btnIgnore;
@@ -295,7 +306,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                     Intent intent = new Intent();
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                    intent.setData(Uri.parse("http://www.google.ca"));
+                    intent.setData(Uri.parse(hackathonName.get(position).getWebsiteLink()));
                     startActivity(intent);
                 }
             });
@@ -326,6 +337,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
             viewHolder.DataText.setText(hackathonName.get(position).getHackathonName());
             viewHolder.cidade.setText(hackathonName.get(position).getLocation());
             viewHolder.estado.setText(hackathonName.get(position).getDate());
+
 
             //user photo
             String photo = hackathonName.get(position).getPhoto();
