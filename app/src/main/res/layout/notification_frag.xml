@@ -19,10 +19,10 @@
     <com.lorsku.pennapps2017hack.SlideLaunchAdapterView
         android:id="@+id/frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         app:rotation_degrees="15.5"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="0dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent" />
 
 
 </FrameLayout>
