@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -22,6 +23,17 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        final Button finishRegistration = (Button) findViewById(R.id.bRegister);
+
+        finishRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iIntent = new Intent(getApplicationContext(), MainActivity.class);
+                getApplicationContext().startActivity(iIntent);
+            }
+        });
+
+
         final EditText etAge = (EditText) findViewById(R.id.etAge);
         final EditText etFname = (EditText) findViewById(R.id.etFname);
         final EditText etLname = (EditText) findViewById(R.id.etLname);
@@ -36,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-        final Button bRegister = (Button) findViewById(R.id.bRegister);
+        /*final Button bRegister = (Button) findViewById(R.id.bRegister);
 
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
                 final String tshirtsize = etTshirtSize.getText().toString();
                 final String essay1 = etEssay1.getText().toString();
 
-               /* Response.Listener<String> responseListener = new Response.Listener<String>() {
+               *//* Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
@@ -81,8 +93,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, email, age, password, gender, phonenumber, school, tshirtsize, essay1, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(registerRequest);*/
+                queue.add(registerRequest);*//*
             }
-        });
+        });*/
     }
 }

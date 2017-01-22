@@ -72,6 +72,15 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Register Here"
+                android:id="@+id/tvRegisterLink"
+                android:layout_below="@+id/email_sign_in_button"
+                android:layout_centerHorizontal="true" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

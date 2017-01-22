@@ -57,7 +57,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sendMessage"
         android:text="Register"
         android:id="@+id/bRegister"
         android:layout_below="@+id/etEssay1"
@@ -65,6 +64,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/etEssay1"
         android:layout_alignEnd="@+id/etEssay1" />
+
 
     <EditText
         android:layout_width="wrap_content"
