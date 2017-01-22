@@ -41,36 +41,54 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         //create new instance on POJOS Hackathon
         recordSet = new ArrayList<>();
 
-
-
         Hackathon hackathon1 =  new Hackathon();
-        hackathon1.setDate("August 1");
-        hackathon1.setHackathonName("Test Hacks");
-        hackathon1.setLocation("Toronto");
+        hackathon1.setDate("January 27-29, 2017");
+        hackathon1.setHackathonName("Fashion Hacks");
+        hackathon1.setLocation("Ken State University");
         hackathon1.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
         recordSet.add(hackathon1);
-        /*
-        Hackathon notification3 =  new Hackathon();
-        notification3.setHackathonName("");
-        notification3.setFoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
-        notification3.setNome_cidade("Palo Alto");
-        notification3.setNome_estado("CA");
-        recordSet.add(notification3);
 
-        Hackathon notification2 =  new Hackathon();
-        notification2.setHackathonName("");
-        notification2.setFoto("uploads/userprofile/A20CF1B8FFA84d58ad6s89qBAFE4F78C.jpg");
-        notification2.setNome_cidade("Washington");
-        notification2.setNome_estado("NE");
-        recordSet.add(notification2);
+        Hackathon hackathon2 =  new Hackathon();
+        hackathon2.setDate("January 28-29, 2017");
+        hackathon2.setHackathonName("HackEd");
+        hackathon2.setLocation("Startup Edmonton");
+        hackathon2.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon2);
 
-        Hackathon notification4 =  new Hackathon();
-        notification4.setHackathonName("");
-        notification4.setFoto("uploads/userprofile/ADHJOD8asd121B8FFAd6s89qBAFE4F78C.jpg");
-        notification4.setNome_cidade("Palo Alto");
-        notification4.setNome_estado("CA");
-        recordSet.add(notification4);
-        */
+        Hackathon hackathon3 =  new Hackathon();
+        hackathon3.setDate("February 11-12, 2017");
+        hackathon3.setHackathonName("Hackpoly");
+        hackathon3.setLocation("California State Polytechnic University, Pomona Campus");
+        hackathon3.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon3);
+
+        Hackathon hackathon4 =  new Hackathon();
+        hackathon4.setDate("February 11-12, 2017");
+        hackathon4.setHackathonName("Pearl Hacks");
+        hackathon4.setLocation("University of North Carolina, Chapel Hill Campus");
+        hackathon4.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon4);
+
+        Hackathon hackathon5 =  new Hackathon();
+        hackathon5.setDate("February 17-19, 2017");
+        hackathon5.setHackathonName("HackYSU");
+        hackathon5.setLocation("Youngstown State University");
+        hackathon5.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon5);
+
+        Hackathon hackathon6 =  new Hackathon();
+        hackathon6.setDate("February 17-19, 2017");
+        hackathon6.setHackathonName("HackCentral");
+        hackathon6.setLocation("University of Manitoba");
+        hackathon6.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon6);
+
+        Hackathon hackathon7 =  new Hackathon();
+        hackathon7.setDate("February 18-19, 2017");
+        hackathon7.setHackathonName("HackHERS");
+        hackathon7.setLocation("Rutgers University");
+        hackathon7.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        recordSet.add(hackathon7);
     }
 
 
