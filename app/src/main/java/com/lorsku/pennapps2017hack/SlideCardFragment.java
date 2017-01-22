@@ -14,6 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 public class SlideCardFragment extends Fragment implements LaunchCardListener.ActionDownInterface {
 
@@ -123,13 +128,11 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             @Override
             public void onLeftCardExit(Object dataObject) {
-                recordSet.remove(0);
                 myAppAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                recordSet.remove(0);
                 myAppAdapter.notifyDataSetChanged();
             }
 
@@ -252,12 +255,12 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 rowView = inflater.inflate(R.layout.item, parent, false);
                 // configure view holder
                 viewHolder = new ViewHolder();
-                viewHolder.DataText = (TextView) rowView.findViewById(R.id.user_name);
-               //viewHolder.friendPhoto = (CircularImageView) rowView.findViewById(R.id.friendPhoto);
+                viewHolder.DataText = (TextView) rowView.findViewById(R.id.hackName);
+                //viewHolder.friendPhoto = (CircularImageView) rowView.findViewById(R.id.friendPhoto);
                 viewHolder.background = (FrameLayout) rowView.findViewById(R.id.background);
                 viewHolder.card_3 = (LinearLayout) rowView.findViewById(R.id.card_3);
                 viewHolder.card_2 = (LinearLayout) rowView.findViewById(R.id.card_2);
-                viewHolder.estado = (TextView) rowView.findViewById(R.id.estado);
+                viewHolder.estado = (TextView) rowView.findViewById(R.id.location);
                 viewHolder.cidade = (TextView) rowView.findViewById(R.id.cidade);
                 //viewHolder.titulo = (TextView) rowView.findViewById(R.id.titulo);
                 viewHolder.btnIgnore = (Button) rowView.findViewById(R.id.btnIgnore);
@@ -274,6 +277,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 @Override
                 public void onClick(View v) {
                     //Log.i("btnAccept", "Aceitar");
+                    applyToHack(recordSet.remove(0).getHackathonName());
                     flingContainer.getTopCardListener().selectRight();
                 }
             });
@@ -311,18 +315,34 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             if (strPhoto != null) {
 
-              //  Picasso.with(activity)
-               //         .load(strPhoto)
+                //  Picasso.with(activity)
+                //         .load(strPhoto)
                 //        .placeholder(R.drawable.avatar_default)
-                 //       .fit()
-                  //      .centerCrop()
-                   //     .into(viewHolder.friendPhoto);
+                //       .fit()
+                //      .centerCrop()
+                //     .into(viewHolder.friendPhoto);
 
             }
 
 
             return rowView;
         }
+    }
+
+    private void applyToHack(String hackathonName) {
+        RequestQueue queue = Volley.newRequestQueue(getContext());
+        String url = "http://8e4eba1b.ngrok.io/" + hackathonName;
+        StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        });
+        queue.add(stringRequest);
     }
 
 }
