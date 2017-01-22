@@ -175,6 +175,20 @@
             android:layout_weight="0.01" />
 
 
+        <Button
+            android:id="@+id/visitWebsite"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:text="Visit"
+            android:background="@drawable/button_red"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.01" />
+
+
+
     </LinearLayout>
 
 </FrameLayout>

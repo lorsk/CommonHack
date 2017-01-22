@@ -1,6 +1,8 @@
 package com.lorsku.pennapps2017hack;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -124,6 +126,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             @Override
             public void removeFirstObjectInAdapter() {
+
             }
 
             @Override
@@ -133,7 +136,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                applyToHack(recordSet.remove(0).getHackathonName());
+                //applyToHack(recordSet.get(0).getHackathonName());
                 myAppAdapter.notifyDataSetChanged();
             }
 
@@ -187,6 +190,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         public int tipo;
         public Button btnIgnore;
         public Button btnAccept;
+        public Button btnVisit;
 
         //controle para esconder as sub-cartas
         public void hideBackground(boolean b, int i) {
@@ -266,6 +270,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 //viewHolder.titulo = (TextView) rowView.findViewById(R.id.titulo);
                 viewHolder.btnIgnore = (Button) rowView.findViewById(R.id.btnIgnore);
                 viewHolder.btnAccept = (Button) rowView.findViewById(R.id.btnAccept);
+                viewHolder.btnVisit = (Button)  rowView.findViewById(R.id.visitWebsite);
                 rowView.setTag(viewHolder);
 
             } else {
@@ -280,6 +285,18 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                     //Log.i("btnAccept", "Aceitar");
                     applyToHack(recordSet.remove(0).getHackathonName());
                     flingContainer.getTopCardListener().selectRight();
+                }
+            });
+
+            viewHolder.btnVisit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Log.i("btnVisit", "Aceitar");
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://www.google.ca"));
+                    startActivity(intent);
                 }
             });
 
