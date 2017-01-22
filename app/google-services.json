@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "1012000471392",
+    "firebase_url": "https://pennapps2017hack.firebaseio.com",
+    "project_id": "pennapps2017hack",
+    "storage_bucket": "pennapps2017hack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012000471392:android:f850bcab6abca9c4",
+        "android_client_info": {
+          "package_name": "anonamoose.com.pennappshack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012000471392-hbsov2b0qec7jsktv417l6o3ag9orfms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "anonamoose.com.pennappshack",
+            "certificate_hash": "20759572AB336C32133EF4F16E1646E3F5E9E2B4"
+          }
+        },
+        {
+          "client_id": "1012000471392-ovp30vmmjm6e8k6n23l18iit9t0n0rmi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "anonamoose.com.pennappshack",
+            "certificate_hash": "2064B03A74A88C7BA2A8A4F85D061A688B2AB00C"
+          }
+        },
+        {
+          "client_id": "1012000471392-3hpid76gg6olgoaqm25f82gegc3006rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHlGo0oK_YiN3KjD6zqVyiRUhahnlVfdg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012000471392-3hpid76gg6olgoaqm25f82gegc3006rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012000471392:android:5d6afd07be5b4e01",
+        "android_client_info": {
+          "package_name": "com.lorsku.pennapps2017hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012000471392-jpg6e1kb4kipft3lfgamdqti2tsdmp4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lorsku.pennapps2017hack",
+            "certificate_hash": "2064B03A74A88C7BA2A8A4F85D061A688B2AB00C"
+          }
+        },
+        {
+          "client_id": "1012000471392-3hpid76gg6olgoaqm25f82gegc3006rq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHlGo0oK_YiN3KjD6zqVyiRUhahnlVfdg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012000471392-3hpid76gg6olgoaqm25f82gegc3006rq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
