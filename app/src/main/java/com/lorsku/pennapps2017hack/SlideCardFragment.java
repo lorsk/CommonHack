@@ -22,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 public class SlideCardFragment extends Fragment implements LaunchCardListener.ActionDownInterface {
 
@@ -53,7 +54,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon1.setDate("January 27-29, 2017");
         hackathon1.setHackathonName("Fashion Hacks");
         hackathon1.setLocation("Ken State University");
-        hackathon1.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon1.setPhoto("r.drawable.fashionhacks");
         hackathon1.setWebsiteLink("http://www.fashiontechhackathon.com/");
         recordSet.add(hackathon1);
 
@@ -374,27 +375,26 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(1000, 1000);
 
-
             viewHolder.DataText.setText(hackathonName.get(position).getHackathonName());
             viewHolder.cidade.setText(hackathonName.get(position).getLocation());
             viewHolder.estado.setText(hackathonName.get(position).getDate());
-            viewHolder.photo.setImageResource(R.drawable.logo);
+            //1viewHolder.photo.setImageResource(R.drawable.logo);
             //viewHolder.photo.setLayoutParams(layoutParams);
 
             //user photo
-            String photo = hackathonName.get(position).getPhoto();
-            String strPhoto = API + "/" + photo;
-/*
-            if (strPhoto != null) {
+            String myphoto = hackathonName.get(position).getPhoto();
+            String strPhoto = API + "/" + myphoto;
+
+            if (myphoto != null) {
 
                   Picasso.with(activity)
                         .load(strPhoto)
                         .placeholder(R.drawable.avatar_default)
                        .fit()
                       .centerCrop()
-                     .into(viewHolder.friendPhoto);
+                  .into(viewHolder.photo);
 
-            }*/
+            }
 
 
             return rowView;

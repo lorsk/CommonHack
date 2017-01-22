@@ -24,8 +24,6 @@ package com.lorsku.pennapps2017hack;
  *  determination <em>R</em><sup>2</sup> and the standard deviation of the
  *  estimates for the slope and <em>y</em>-intercept.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
  */
 class LinearComeback {
     private final int N;

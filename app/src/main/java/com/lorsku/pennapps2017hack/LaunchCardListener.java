@@ -50,7 +50,7 @@ public class LaunchCardListener implements View.OnTouchListener {
     private View frame = null;
     private int touchPosition;
     private boolean isAnimationRunning = false;
-    private float MAX_COS = (float) Math.cos(Math.toRadians(45));
+    private float MAX_COS = (float) Math.cos(Math.toRadians(87));
 
 
     public LaunchCardListener(View frame, Object itemAtPosition, FlingListener flingListener) {
