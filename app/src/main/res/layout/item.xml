@@ -102,7 +102,7 @@
 
 
                 <ImageView
-                    android:layout_width="92dp"
+                    android:layout_width="match_parent"
                     android:layout_height="78dp"
                     app2:srcCompat="@drawable/avatar_default"
                     android:id="@+id/hackathonImage" />
