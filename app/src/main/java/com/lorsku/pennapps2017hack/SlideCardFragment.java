@@ -131,12 +131,13 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             @Override
             public void onLeftCardExit(Object dataObject) {
+                recordSet.remove(0);
                 myAppAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                //applyToHack(recordSet.get(0).getHackathonName());
+                applyToHack(recordSet.remove(0).getHackathonName());
                 myAppAdapter.notifyDataSetChanged();
             }
 
@@ -283,7 +284,6 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 @Override
                 public void onClick(View v) {
                     //Log.i("btnAccept", "Aceitar");
-                    applyToHack(recordSet.remove(0).getHackathonName());
                     flingContainer.getTopCardListener().selectRight();
                 }
             });
