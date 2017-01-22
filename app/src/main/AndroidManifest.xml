@@ -28,6 +28,7 @@
         </activity>
 
         <activity android:name=".RegisterActivity"></activity>
+        <meta-data android:name="com.usebutton.applicationid" android:value="app-4c262d6128383abd"/>
     </application>
 
 </manifest>
