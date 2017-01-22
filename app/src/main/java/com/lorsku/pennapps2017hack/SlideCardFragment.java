@@ -133,6 +133,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
 
             @Override
             public void onRightCardExit(Object dataObject) {
+                applyToHack(recordSet.remove(0).getHackathonName());
                 myAppAdapter.notifyDataSetChanged();
             }
 
