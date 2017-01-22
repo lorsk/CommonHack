@@ -273,7 +273,8 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
             viewHolder.btnAccept.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("btnAccept", "Aceitar");
+                    //Log.i("btnAccept", "Aceitar");
+                    flingContainer.getTopCardListener().selectRight();
                 }
             });
 
@@ -282,7 +283,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 @Override
                 public void onClick(View v) {
 
-                    flingContainer.getTopCardListener().selectRight();
+                    flingContainer.getTopCardListener().selectLeft();
 
                 }
             });
