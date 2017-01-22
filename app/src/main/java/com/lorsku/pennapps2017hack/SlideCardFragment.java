@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -106,6 +107,41 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         hackathon7.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
         hackathon7.setWebsiteLink("http://hackhers.us/");
         recordSet.add(hackathon7);
+
+        Hackathon hackathon8= new Hackathon ();
+        hackathon8.setDate("February 25-26, 2017");
+        hackathon8.setHackathonName("Desert Hacks");
+        hackathon8.setLocation("Arizona State University");
+        hackathon8.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon8.setWebsiteLink("http://www.deserthacks.org/");
+        recordSet.add(hackathon8);
+
+
+        Hackathon hackathon9 = new Hackathon ();
+        hackathon9.setDate("March4-5, 2017");
+        hackathon9.setHackathonName("CUHacking");
+        hackathon9.setLocation("Carleton University");
+        hackathon9.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon9.setWebsiteLink("http://cuhacking.com/");
+        recordSet.add(hackathon9);
+
+        Hackathon hackathon10 = new Hackathon();
+        hackathon10.setDate("March 4-5, 2017");
+        hackathon10.setHackathonName("SiliconHacks");
+        hackathon10.setLocation("42 Coding University in Silicon Valley");
+        hackathon10.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon10.setWebsiteLink("http://siliconhacks.com/");
+        recordSet.add(hackathon10);
+
+        Hackathon hackathon11 = new Hackathon ();
+        hackathon11.setDate("March 25-26, 2017");
+        hackathon11.setHackathonName("Desert Hacks");
+        hackathon11.setLocation("Arizona State University");
+        hackathon11.setPhoto("uploads/userprofile/A20CF1B8FFA5f64as5saopds58asAFE4F78C.jpg");
+        hackathon11.setWebsiteLink("http://www.deserthacks.org/");
+        recordSet.add(hackathon11);
+
+
     }
 
 
@@ -198,7 +234,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
         public TextView cidade;
         public TextView titulo;
         public Button btnWebSite;
-        //public CircularImageView friendPhoto;
+        public ImageView photo;
         public int tipo;
         public Button btnIgnore;
         public Button btnAccept;
@@ -273,7 +309,7 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 // configure view holder
                 viewHolder = new ViewHolder();
                 viewHolder.DataText = (TextView) rowView.findViewById(R.id.hackName);
-                //viewHolder.friendPhoto = (CircularImageView) rowView.findViewById(R.id.friendPhoto);
+                viewHolder.photo = (ImageView) rowView.findViewById(R.id.hackathonImage);
                 viewHolder.background = (FrameLayout) rowView.findViewById(R.id.background);
                 viewHolder.card_3 = (LinearLayout) rowView.findViewById(R.id.card_3);
                 viewHolder.card_2 = (LinearLayout) rowView.findViewById(R.id.card_2);
@@ -312,6 +348,8 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
             });
 
 
+
+
             viewHolder.btnIgnore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -334,25 +372,29 @@ public class SlideCardFragment extends Fragment implements LaunchCardListener.Ac
                 viewHolder.btnIgnore.setText("Ignorar");
             }
 
+            //LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(1000, 1000);
+
+
             viewHolder.DataText.setText(hackathonName.get(position).getHackathonName());
             viewHolder.cidade.setText(hackathonName.get(position).getLocation());
             viewHolder.estado.setText(hackathonName.get(position).getDate());
-
+            viewHolder.photo.setImageResource(R.drawable.logo);
+            //viewHolder.photo.setLayoutParams(layoutParams);
 
             //user photo
             String photo = hackathonName.get(position).getPhoto();
             String strPhoto = API + "/" + photo;
-
+/*
             if (strPhoto != null) {
 
-                //  Picasso.with(activity)
-                //         .load(strPhoto)
-                //        .placeholder(R.drawable.avatar_default)
-                //       .fit()
-                //      .centerCrop()
-                //     .into(viewHolder.friendPhoto);
+                  Picasso.with(activity)
+                        .load(strPhoto)
+                        .placeholder(R.drawable.avatar_default)
+                       .fit()
+                      .centerCrop()
+                     .into(viewHolder.friendPhoto);
 
-            }
+            }*/
 
 
             return rowView;
